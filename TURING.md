@@ -135,7 +135,7 @@ State sections are tagged with priority levels to optimize token usage:
 Every capture tracks token usage:
 
 ```
-**Tokens**: ~1250 (state: 850, template: 400)
+**Tokens**: ~2000 (state: 300, template: 1700)
 ```
 
 **What tokens represent:** These are **context window consumption estimates** — how many tokens the restored TURING state will use in Claude's context when a session is restored. They are NOT API billing tokens.
@@ -144,7 +144,7 @@ Every capture tracks token usage:
 ┌─────────────────────────────────────────────┐
 │           Claude Context Window             │
 ├─────────────────────────────────────────────┤
-│ TURING restored state (~850 tokens)         │ ← Tracked here
+│ TURING restored state (~300 tokens)         │ ← Tracked here
 │ System prompts & instructions               │
 │ Conversation history                        │
 │ Code being discussed                        │
@@ -233,15 +233,15 @@ token_estimate: 850
     "checksum": "a1b2c3d4..."
   },
   "tokens": {
-    "state": 850,
-    "template": 400,
-    "total": 1250,
+    "state": 300,
+    "template": 1700,
+    "total": 2000,
     "status": "ok"
   },
   "token_history": [
-    {"timestamp": "...", "tokens": 650, "compaction": 1},
-    {"timestamp": "...", "tokens": 750, "compaction": 2},
-    {"timestamp": "...", "tokens": 850, "compaction": 3}
+    {"timestamp": "...", "tokens": 250, "compaction": 1},
+    {"timestamp": "...", "tokens": 280, "compaction": 2},
+    {"timestamp": "...", "tokens": 300, "compaction": 3}
   ],
   "auto_decisions_extracted": 5
 }
@@ -686,7 +686,7 @@ Use `/turing-status` to see TURING's cognitive memory:
 | `abc123...` | /dev/ttys001 | 2h ago | 3 | ~850 |
 
 ## Latest Session: abc123...
-- **Token Usage**: state=850, template=400, total=1250
+- **Token Usage**: state=300, template=1700, total=2000
 - **Compaction Count**: 3
 ```
 

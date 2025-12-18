@@ -56,10 +56,11 @@ TURING differentiates from other Claude Code context plugins by targeting compac
 
 | Feature | TURING | Claude-Mem | Context-Toolkit | Claude-Context-Manager |
 |---------|--------|------------|-----------------|------------------------|
+| **What's Preserved** | Session decisions/focus | Conversation summaries | Static briefings | Code patterns/conventions |
 | **Trigger** | Auto on compaction hooks | Background tool monitoring | Manual CONTEXT.md updates | claude.md health checks |
 | **Storage** | `.claude/sessions/` (JSON/MD/ADR) | SQLite summaries | Human briefings | Autonomous claude.md sync |
-| **Discovery** | TTY-priority algorithm | Last 10 summaries | N/A (static files) | Session integration |
-| **Token Optimization** | Priority restore (~1250 tokens) | AI compression | N/A | Staleness detection |
+| **Discovery** | Session ID + recency matching | Last 10 summaries | N/A (static files) | Session integration |
+| **Token Optimization** | Priority restore (~2000 tokens) | AI compression | N/A | Staleness detection |
 | **Dependencies** | None (bash/Python/git) | PM2/SQLite | None | CCMP ecosystem |
 
 ### Architectural Edge
