@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 const From = (props) => {
 	const [text, setText] = useState('Microdeggre');
 	function handleClick() {
-		setText('jayasimha', 'simha', 'kello');
+		setText('jayasimha');
 		console.log('jaysimha');
 	}
 	return (

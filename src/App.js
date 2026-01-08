@@ -3,6 +3,9 @@ import Com from './Com';
 import Popup from './Popup';
 import Book from './Book';
 import From from './From';
+import Ustate from './Ustate';
+import Hello from './Hello';
+import UseEffect from './UseEffect';
 
 function App() {
 	// const text = 'microdeggre';
@@ -113,6 +116,9 @@ function App() {
 				)}
 				<Book book={book} />
 				<From form={form} />
+				<Ustate />
+				<Hello />
+				<UseEffect />
 			</React.Fragment>
 		</div>
 	);
